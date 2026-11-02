@@ -1,0 +1,326 @@
+.lookup-header {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid rgba(63, 63, 70, 0.4);
+  background-color: rgba(5, 5, 8, 1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.lookup-header *,
+.lookup-header *::before,
+.lookup-header *::after {
+  box-sizing: border-box;
+}
+
+.lookup-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .lookup-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lookup-container {
+    padding: 0 2rem;
+  }
+}
+
+/* Logo Section */
+.lookup-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.lookup-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.lookup-logo:hover {
+  opacity: 0.9;
+}
+
+.lookup-logo-icon-wrapper {
+  display: flex;
+  height: 38px;
+  width: 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+  padding: 1px;
+}
+
+.lookup-logo-icon-inner {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background-color: #09090b;
+  color: #ffffff;
+}
+
+.lookup-logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.lookup-logo-text span {
+  color: #818cf8;
+}
+
+/* Desktop Navigation */
+.lookup-nav-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .lookup-nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+}
+
+.lookup-nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lookup-nav-link:hover {
+  color: #ffffff;
+}
+
+/* Actions & Search */
+.lookup-actions-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .lookup-actions-desktop {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+
+.lookup-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lookup-search-icon {
+  position: absolute;
+  left: 0.875rem; /* تم جعل الأيقونة في اليسار لدعم الإنجليزية */
+  height: 0.95rem;
+  width: 0.95rem;
+  color: #71717a;
+  pointer-events: none;
+}
+
+.lookup-search-input {
+  height: 38px;
+  width: 17rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(63, 63, 70, 0.6);
+  background-color: rgba(18, 18, 23, 0.7);
+  padding-left: 2.375rem; /* ضبط المسافات للغة الإنجليزية */
+  padding-right: 2.75rem;
+  font-size: 0.8rem;
+  color: #f4f4f5;
+  outline: none;
+  direction: ltr;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.lookup-search-input::placeholder {
+  color: #71717a;
+}
+
+.lookup-search-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  background-color: rgba(24, 24, 32, 0.9);
+}
+
+.lookup-kbd {
+  position: absolute;
+  right: 0.625rem; /* زر الاختصار أصبح في اليمين يناسب الإنجليزية */
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  border-radius: 5px;
+  border: 1px solid rgba(82, 82, 91, 0.6);
+  background-color: #18181b;
+  padding: 0.15rem 0.4rem;
+  font-size: 10px;
+  font-weight: 500;
+  color: #a1a1aa;
+}
+
+.lookup-login-btn {
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.lookup-login-btn:hover {
+  color: #ffffff;
+}
+
+.lookup-primary-btn {
+  display: inline-flex;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  padding: 0 1.15rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #09090b;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.lookup-primary-btn:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.lookup-primary-btn:active {
+  transform: scale(0.97);
+}
+
+/* Mobile Menu Toggle Button */
+.lookup-mobile-toggle-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .lookup-mobile-toggle-wrapper {
+    display: none;
+  }
+}
+
+.lookup-mobile-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid rgba(63, 63, 70, 0.5);
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.lookup-mobile-toggle-btn:hover {
+  background-color: #18181b;
+  color: #ffffff;
+}
+
+/* Mobile Menu Drawer */
+.lookup-mobile-drawer {
+  border-bottom: 1px solid rgba(63, 63, 70, 0.5);
+  background-color: rgba(9, 9, 11, 0.98);
+  padding: 1rem 1.25rem 1.5rem 1.25rem;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+@media (min-width: 768px) {
+  .lookup-mobile-drawer {
+    display: none;
+  }
+}
+
+.lookup-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.lookup-mobile-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lookup-mobile-link:hover {
+  color: #ffffff;
+}
+
+.lookup-mobile-divider {
+  margin: 0.5rem 0;
+  border: none;
+  border-top: 1px solid rgba(63, 63, 70, 0.5);
+}
+
+.lookup-mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lookup-mobile-login {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.625rem;
+  border: 1px solid rgba(63, 63, 70, 0.6);
+  background-color: #121216;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.lookup-mobile-start {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.625rem;
+  background-color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #09090b;
+  text-decoration: none;
+}
